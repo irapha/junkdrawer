@@ -15,13 +15,17 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'                    " let Vundle manage Vundle
 Plugin 'git://git.wincent.com/command-t.git'  " Fast file navigation.
+Plugin 'luochen1990/rainbow'                  " Rainbow parenthesis
 Plugin 'Valloric/YouCompleteMe'               " Autocompletion.
 Plugin 'scrooloose/nerdtree'                  " Easy file navigation within vim.
+Plugin 'Xuyuanp/nerdtree-git-plugin'         " Git diffs in nerdtree files
 Plugin 'tpope/vim-surround'           " editing surrounding quotes, parens, etc.
-Plugin 'L9' " Useful vim functions. From http://vim-scripts.org/vim/scripts.html
+Plugin 'scrooloose/syntastic'         " Syntax checking and highlighting
+Plugin 'Yggdroot/indentLine'                  " Display indentation line markers
+Plugin 'easymotion/vim-easymotion'            " Easy navigation infile
 
-" Plugin 'tpope/vim-fugitive' " Git commands within vim
-
+" Plugin 'L9' " Useful vim functions. From http://vim-scripts.org/vim/scripts.html
+" Plugin 'tpope/vim-fugitive'                   " Git commands within vim
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
 " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'} " Shortcuts for HTML scripting.
@@ -73,14 +77,25 @@ set tabstop=2                         " number of visual spaces per TAB char
 set softtabstop=2         " number of spaces a TAB counts for when editing
 set shiftwidth=2          " number of spaces used when indenting with >> and <<
 set expandtab                         " makes TAB = spaces.
-inoremap jk <ESC>                     " Map jk to esc
-cmap w!! w !sudo tee % >/dev/null     " :w!! to write with sudo.
+inoremap jk <ESC>|                    " Map jk to esc
+cmap w!! w !sudo tee % >/dev/null|    " :w!! to write with sudo.
 :2mat ErrorMsg '\%>80v.'              " Highlight character after cell 81.
+let g:rainbow_active = 1              " Allow rainbow parenthesis plugin
+
+" EASYMOTION settings
+nmap s <Plug>(easymotion-s)|          " Search for given char (sa highlights 'a')
+map <Leader>j <Plug>(easymotion-j)|   " Highlight every line down
+map <Leader>k <Plug>(easymotion-k)|   " Highlight every line up
+map / <Plug>(easymotion-sn)|          " Remaps / to search with easymotion
+omap / <Plug>(easymotion-tn)|         "   Same as above
+map n <Plug>(easymotion-next)|        "   jump to next match in search
+map N <Plug>(easymotion-prev)|        "   jump to prev match in search
+" EASYMOTION END
 
 " Searching 
 set incsearch " search as characters are entered
 set hlsearch " highlight matches
-nnoremap <leader><space> :nohlsearch<CR> " turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>|   " turn off search highlight
 
 """ NERDTree / NERDCommenter settings.
 " Close vim if the only window still open is NERDTree.
