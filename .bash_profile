@@ -39,6 +39,9 @@ fi
 # gradle alias
 alias gradle="/usr/local/bin/gradle"
 
+# set la to display hidden files too
+alias la="ls -a"
+
 # Add GHC 7.10.2 to the PATH, via https://ghcformacosx.github.io/
 export GHC_DOT_APP="/Applications/ghc-7.10.2.app"
 if [ -d "$GHC_DOT_APP" ]; then
