@@ -14,7 +14,7 @@ call vundle#begin()
 "   :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 
 Plugin 'gmarik/Vundle.vim'                    " let Vundle manage Vundle
-Plugin 'git://git.wincent.com/command-t.git'  " Fast file navigation.
+Plugin 'wincent/command-t'                    " Fast file navigation.
 Plugin 'luochen1990/rainbow'                  " Rainbow parenthesis
 Plugin 'Valloric/YouCompleteMe'               " Autocompletion.
 Plugin 'scrooloose/nerdtree'                  " Easy file navigation within vim.
