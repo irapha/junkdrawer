@@ -24,6 +24,7 @@ Plugin 'scrooloose/syntastic'         " Syntax checking and highlighting
 Plugin 'Yggdroot/indentLine'                  " Display indentation line markers
 Plugin 'easymotion/vim-easymotion'            " Easy navigation infile
 
+" Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'} " Power status line
 " Plugin 'L9' " Useful vim functions. From http://vim-scripts.org/vim/scripts.html
 " Plugin 'tpope/vim-fugitive'                   " Git commands within vim
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -107,6 +108,10 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 " use space delims when toggling comments in NERDCommenter
 :let NERDSpaceDelims = 1
 """ NERD settings END
+
+""" POWERLINE VIM STATUS
+" set laststatus=2|                     " Always show status line
+""" POWERLINE END
 
 " Trim whitespace when closing file.
 function! <SID>StripTrailingWhitespaces()
