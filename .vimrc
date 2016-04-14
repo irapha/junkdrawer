@@ -111,6 +111,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 """ POWERLINE VIM STATUS
 " set laststatus=2|                     " Always show status line
+" noshowmode                " Hide default mode text (like __INSERT__)
 """ POWERLINE END
 
 " Trim whitespace when closing file.
