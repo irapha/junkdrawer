@@ -1,0 +1,10 @@
+[user]
+	name = Raphael Gontijo Lopes
+	email = raphaelgontijolopes@gmail.com
+[alias]
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+
+[core]
+	editor = vim
+[push]
+	default = simple
