@@ -23,6 +23,7 @@ Plugin 'tpope/vim-surround'           " editing surrounding quotes, parens, etc.
 Plugin 'scrooloose/syntastic'         " Syntax checking and highlighting
 Plugin 'Yggdroot/indentLine'                  " Display indentation line markers
 Plugin 'easymotion/vim-easymotion'            " Easy navigation infile
+Plugin 'dart-lang/dart-vim-plugin'            " Dart lang syntax highlighting.
 
 " Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'} " Power status line
 " Plugin 'L9' " Useful vim functions. From http://vim-scripts.org/vim/scripts.html
