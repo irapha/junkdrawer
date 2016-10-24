@@ -18,6 +18,7 @@ Plugin 'wincent/command-t'                    " Fast file navigation.
 Plugin 'luochen1990/rainbow'                  " Rainbow parenthesis
 Plugin 'Valloric/YouCompleteMe'               " Autocompletion.
 Plugin 'scrooloose/nerdtree'                  " Easy file navigation within vim.
+Plugin 'scrooloose/nerdcommenter'             " Easy commenting system for vim.
 Plugin 'Xuyuanp/nerdtree-git-plugin'         " Git diffs in nerdtree files
 Plugin 'tpope/vim-surround'           " editing surrounding quotes, parens, etc.
 Plugin 'scrooloose/syntastic'         " Syntax checking and highlighting
