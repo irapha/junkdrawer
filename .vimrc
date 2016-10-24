@@ -23,6 +23,8 @@ Plugin 'tpope/vim-surround'           " editing surrounding quotes, parens, etc.
 Plugin 'scrooloose/syntastic'         " Syntax checking and highlighting
 Plugin 'Yggdroot/indentLine'                  " Display indentation line markers
 Plugin 'easymotion/vim-easymotion'            " Easy navigation infile
+Plugin 'haya14busa/incsearch.vim'             " Incremental search
+Plugin 'haya14busa/incsearch-easymotion.vim'  " IncSearch + EasyMotion integration
 Plugin 'dart-lang/dart-vim-plugin'            " Dart lang syntax highlighting.
 
 " Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'} " Power status line
@@ -89,11 +91,30 @@ let g:rainbow_active = 1              " Allow rainbow parenthesis plugin
 nmap s <Plug>(easymotion-s)|          " Search for given char (sa highlights 'a')
 map <Leader>j <Plug>(easymotion-j)|   " Highlight every line down
 map <Leader>k <Plug>(easymotion-k)|   " Highlight every line up
-map / <Plug>(easymotion-sn)|          " Remaps / to search with easymotion
-omap / <Plug>(easymotion-tn)|         "   Same as above
-map n <Plug>(easymotion-next)|        "   jump to next match in search
-map N <Plug>(easymotion-prev)|        "   jump to prev match in search
+
+" The command below are not used because incsearch uses them instead.
+" If you remove IncSearch, also uncomment these, and remove IncSearch+EasyMotion
+" map / <Plug>(easymotion-sn)|          " Remaps / to search with easymotion
+" omap / <Plug>(easymotion-tn)|         "   Same as above
+" map n <Plug>(easymotion-next)|        "   jump to next match in search
+" map N <Plug>(easymotion-prev)|        "   jump to prev match in search
 " EASYMOTION END
+
+" IncSearch Start
+set hlsearch
+let g:incsearch#auto_nohlsearch = 1
+map n  <Plug>(incsearch-nohl-n)
+map N  <Plug>(incsearch-nohl-N)
+map *  <Plug>(incsearch-nohl-*)
+map #  <Plug>(incsearch-nohl-#)
+map g* <Plug>(incsearch-nohl-g*)
+map g# <Plug>(incsearch-nohl-g#)
+" IncSearch End
+
+" IncSearch + EasyMotion Start
+map / <Plug>(incsearch-easymotion-/)| " Remaps / to seach with incsearch+easymotion
+omap / <Plug>(incsearch-easymotion-/)|"   Same as above
+" IncSearch + EasyMotion End
 
 " Searching 
 set incsearch " search as characters are entered
