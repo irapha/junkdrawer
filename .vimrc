@@ -73,7 +73,7 @@ set backspace=indent,eol,start
 
 set nu                                " show line numbers.
 set cursorline                        " highlight current line.
-highlight Cursorline cterm=bold ctermbg=5 " set line highlighting options
+highlight Cursorline cterm=bold ctermbg=Black " set line highlighting options
 set wildmenu                          " visual autocomplete for command menu
 set pastetoggle=<F2>      " enter paste mode (:set paste / :set nopaste)
 syntax enable                         " Enable syntax
