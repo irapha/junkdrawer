@@ -87,6 +87,7 @@ inoremap jk <ESC>|                    " Map jk to esc
 cmap w!! w !sudo tee % >/dev/null|    " :w!! to write with sudo.
 :2mat ErrorMsg '\%>80v.'              " Highlight character after cell 81.
 let g:rainbow_active = 1              " Allow rainbow parenthesis plugin
+set viminfo='20,<1000|                " Allow up to 1000 lines in copy buffer
 
 " EASYMOTION settings
 nmap s <Plug>(easymotion-s)|          " Search for given char (sa highlights 'a')
