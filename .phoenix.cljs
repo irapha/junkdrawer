@@ -303,16 +303,16 @@
    ; TODO: make 'release.cls' minify again
 
    ; Resize and position window macros
-   (bind "Y" ["alt" "cmd" "shift"] to-left-half)
-   (bind "U" ["alt" "cmd" "shift"] to-right-half)
-   (bind "x" ["alt" "cmd"] to-fullscreen)
-   (bind "g" ["alt" "cmd"] to-middle)
+   (bind "a" ["alt" "cmd"] to-left-half)
+   (bind "d" ["alt" "cmd"] to-right-half)
+   (bind "f" ["alt" "cmd"] to-fullscreen)
+   (bind "s" ["alt" "cmd"] to-middle)
 
    ; Move window to <direction> by a bit
-   (bind "l" ["alt" "cmd" ] move-right)
-   (bind "h" ["alt" "cmd" ] move-left)
-   (bind "j" ["alt" "cmd" ] move-down)
-   (bind "k" ["alt" "cmd" ] move-up)
+   (bind "l" ["alt" "cmd"] move-right)
+   (bind "h" ["alt" "cmd"] move-left)
+   (bind "j" ["alt" "cmd"] move-down)
+   (bind "k" ["alt" "cmd"] move-up)
 
    ; Snap window to <direction> edge of screen
    (bind "L" ["alt" "cmd" "shift"] snap-right)
@@ -336,6 +336,8 @@
    (bind "9" ["alt" "cmd" "ctrl"] (partial move-to-space 8))
 
    ; TODO: add a way to create/remove spaces
+   ; (bind "c" ["alt" "cmd" "ctrl"] create-space)
+   ; (bind "x" ["alt" "cmd" "ctrl"] create-space)
 
    ; TODO: consider adding a way to rotate windows if they're tiled in an
    ; arrangement
@@ -347,10 +349,10 @@
    ; (bind "k" ["alt" "cmd" "ctrl"] focus-previous)
 
    ; Grow/Shrink window
-   (bind "right" ["alt" "cmd" "shift"] grow-right)
-   (bind "left" ["alt" "cmd" "shift"] shrink-left)
-   (bind "down" ["alt" "cmd" "shift"] grow-down)
-   (bind "up" ["alt" "cmd" "shift"] shrink-up)
+   (bind "right" ["alt" "cmd"] grow-right)
+   (bind "left" ["alt" "cmd"] shrink-left)
+   (bind "down" ["alt" "cmd"] grow-down)
+   (bind "up" ["alt" "cmd"] shrink-up)
 
    ; Move window to monitor in <direction>
    (bind "left" ["alt" "cmd" "ctrl"] left-one-monitor)
@@ -362,6 +364,6 @@
 
    ; TODO: add way to create new chrome/terminal window (auto makes it centered)
    ; Create new window of app
-   ; (bind "c" ["shift" "cmd" "ctrl"] (partial launch-window "iTerm"))
-   ; (bind "x" ["shift" "cmd" "ctrl"] (partial launch-window "Google Chrome"))
+   ; (bind "c" ["cmd" "ctrl" "shift"] (partial launch-window "iTerm"))
+   ; (bind "x" ["cmd" "ctrl" "shift"] (partial launch-window "Google Chrome"))
    ])
