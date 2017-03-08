@@ -359,11 +359,11 @@
    (bind "right" ["alt" "cmd" "ctrl"] right-one-monitor)
 
    ; Switch focus to app
-   (bind "c" ["cmd" "ctrl"] (partial focus-or-start "iTerm"))
-   (bind "x" ["cmd" "ctrl"] (partial focus-or-start "Google Chrome"))
+   (bind "c" ["alt" "cmd"] (partial focus-or-start "iTerm"))
+   (bind "x" ["alt" "cmd"] (partial focus-or-start "Google Chrome"))
 
    ; TODO: add way to create new chrome/terminal window (auto makes it centered)
    ; Create new window of app
-   ; (bind "c" ["cmd" "ctrl" "shift"] (partial launch-window "iTerm"))
-   ; (bind "x" ["cmd" "ctrl" "shift"] (partial launch-window "Google Chrome"))
+   ; (bind "c" ["alt" "cmd" "shift"] (partial launch-window "iTerm"))
+   ; (bind "x" ["alt" "cmd" "shift"] (partial launch-window "Google Chrome"))
    ])
