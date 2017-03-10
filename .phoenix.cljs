@@ -244,29 +244,21 @@
           (.focus window)
           )))))
 
-; (defn focus-next []
-  ; (when-let [window (.focused js/Window)]
-    ; (if (not (.focusClosestNeighbor window "east"))
-      ; (if (not (.focusClosestNeighbor window "south"))
-        ; (if (not (.focusClosestNeighbor window "west"))
-          ; (if (not (.focusClosestNeighbor window "north"))
-            ; (log "oopsie should not happen")
-            ; (log "went to north")
-            ; )
-          ; (log "went to west")
-          ; )
-        ; (log "went to south")
-        ; )
-      ; (log "went to east")
-      ; )))
+(defn focus-next []
+  (when-let [window (.focused js/Window)]
+    (when-let [window-list (clj->js (sort-by (fn [w] [(.-y (.frame w)), (.-x (.frame w))])
+                                    (filter (fn [w] (not (= (.title w) ""))) (.all js/Window))))]
+      (when-let [window-idx (.indexOf (clj->js (map (fn [w] (.isEqual w window)) window-list)) 1)]
+          (if-let [next-idx (mod (+ window-idx 1) (count window-list))]
+            (.focus (get window-list next-idx)))))))
 
-; (defn focus-previous []
-  ; (when-let [window (.focused js/Window)]
-    ; (if (not (.focusClosestNeighbor window "north"))
-      ; (if (not (.focusClosestNeighbor window "west"))
-        ; (if (not (.focusClosestNeighbor window "south"))
-          ; (if (not (.focusClosestNeighbor window "east"))
-            ; (log "oopsie")))))))
+(defn focus-previous []
+  (when-let [window (.focused js/Window)]
+    (when-let [window-list (clj->js (sort-by (fn [w] [(.-y (.frame w)), (.-x (.frame w))])
+                                    (filter (fn [w] (not (= (.title w) ""))) (.all js/Window))))]
+      (when-let [window-idx (.indexOf (clj->js (map (fn [w] (.isEqual w window)) window-list)) 1)]
+          (if-let [next-idx (mod (- window-idx 1) (count window-list))]
+            (.focus (get window-list next-idx)))))))
 
 (def last-recently-launched-app (atom nil))
 
@@ -345,8 +337,8 @@
    ; TODO: add way to cycle between focused windows (even in diff spaces).
    ; ideally ordered by location
    ; Focus next/previous window
-   ; (bind "j" ["alt" "cmd" "ctrl"] focus-next)
-   ; (bind "k" ["alt" "cmd" "ctrl"] focus-previous)
+   (bind "j" ["alt" "cmd" "ctrl"] focus-next)
+   (bind "k" ["alt" "cmd" "ctrl"] focus-previous)
 
    ; Grow/Shrink window
    (bind "right" ["alt" "cmd"] grow-right)
