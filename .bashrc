@@ -34,3 +34,6 @@ export CUDA_HOME=/usr/local/cuda
 
 # needed for vim colorscheme to work in desktop
 [ -z "$TMUX" ] && export TERM="xterm-256color"
+
+# record timestamps for 'history' command
+echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bashrc
