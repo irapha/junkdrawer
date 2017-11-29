@@ -54,4 +54,4 @@ PATH="/Library/Frameworks/Python.framework/Versions/2.7/bin:${PATH}"
 export PATH
 
 # record timestamps for 'history' command
-echo 'export HISTTIMEFORMAT="%d/%m/%y %T "' >> ~/.bashrc
+export HISTTIMEFORMAT="%d/%m/%y %T "
