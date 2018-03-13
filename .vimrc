@@ -16,17 +16,17 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'                    " let Vundle manage Vundle
 Plugin 'wincent/command-t'                    " Fast file navigation.
 Plugin 'luochen1990/rainbow'                  " Rainbow parenthesis
-Plugin 'Valloric/YouCompleteMe'               " Autocompletion.
+" Plugin 'Valloric/YouCompleteMe'               " Autocompletion.
 Plugin 'scrooloose/nerdtree'                  " Easy file navigation within vim.
 Plugin 'scrooloose/nerdcommenter'             " Easy commenting system for vim.
 Plugin 'Xuyuanp/nerdtree-git-plugin'         " Git diffs in nerdtree files
 Plugin 'tpope/vim-surround'           " editing surrounding quotes, parens, etc.
-Plugin 'scrooloose/syntastic'         " Syntax checking and highlighting
+" Plugin 'scrooloose/syntastic'         " Syntax checking and highlighting
 Plugin 'Yggdroot/indentLine'                  " Display indentation line markers
 Plugin 'easymotion/vim-easymotion'            " Easy navigation infile
 Plugin 'haya14busa/incsearch.vim'             " Incremental search
 Plugin 'haya14busa/incsearch-easymotion.vim'  " IncSearch + EasyMotion integration
-Plugin 'dart-lang/dart-vim-plugin'            " Dart lang syntax highlighting.
+" Plugin 'dart-lang/dart-vim-plugin'            " Dart lang syntax highlighting.
 
 " Plugin 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'} " Power status line
 " Plugin 'L9' " Useful vim functions. From http://vim-scripts.org/vim/scripts.html
@@ -86,8 +86,13 @@ set expandtab                         " makes TAB = spaces.
 inoremap jk <ESC>|                    " Map jk to esc
 cmap w!! w !sudo tee % >/dev/null|    " :w!! to write with sudo.
 :2mat ErrorMsg '\%>80v.'              " Highlight character after cell 81.
+" set colorcolumn=81
 let g:rainbow_active = 1              " Allow rainbow parenthesis plugin
 set viminfo='20,<1000|                " Allow up to 1000 lines in copy buffer
+" these options below were necessary for nvim...
+set laststatus=0|                     " Never show status line
+set guicursor=n-v-c:block-Cursor      " always use block cursor
+set guicursor+=i:block-Cursor         " always use block cursor
 
 " EASYMOTION settings
 nmap s <Plug>(easymotion-s)|          " Search for given char (sa highlights 'a')
