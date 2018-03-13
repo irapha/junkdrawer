@@ -88,7 +88,8 @@ cmap w!! w !sudo tee % >/dev/null|    " :w!! to write with sudo.
 :2mat ErrorMsg '\%>80v.'              " Highlight character after cell 81.
 " set colorcolumn=81
 let g:rainbow_active = 1              " Allow rainbow parenthesis plugin
-set viminfo='20,<1000|                " Allow up to 1000 lines in copy buffer
+" set viminfo='20,<1000|                " Allow up to 1000 lines in copy buffer
+set viminfo='100,<1000,s100,h
 " these options below were necessary for nvim...
 set laststatus=0|                     " Never show status line
 set guicursor=n-v-c:block-Cursor      " always use block cursor
