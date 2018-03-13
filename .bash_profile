@@ -4,8 +4,11 @@ export CLASSPATH=$CLASSPATH:/Users/raphael/Documents/Java/JUnit/junit-4.12.jar:/
 function gi() { curl -L -s https://www.gitignore.io/api/$@ ;}
 
 # Use brew vim
-alias vim="/usr/local/Cellar/vim/7.4.488/bin/vim"
-alias vi="/usr/local/Cellar/vim/7.4.488/bin/vim"
+# alias vim="/usr/local/Cellar/vim/7.4.488/bin/vim"
+# alias vi="/usr/local/Cellar/vim/7.4.488/bin/vim"
+
+# use neovim
+alias vim=nvim
 
 # echo path with only dir initials, except for current dir.
 sps() {

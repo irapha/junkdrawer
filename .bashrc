@@ -28,6 +28,9 @@ export PS1="\[\033[0m\]\$(sps) \[\033[1;36m\]\$(find_br)\[\033[0m\]$ "
 # set la to display hidden files too
 alias la="ls -a"
 
+# use neovim
+alias vim=nvim
+
 # paths for cuda
 export LD_LIBRARY_PATH="$LD_LIBRARY_PATH:/usr/local/cuda/lib64"
 export CUDA_HOME=/usr/local/cuda
