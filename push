@@ -1,0 +1,7 @@
+#!/bin/bash
+
+KEY=""
+MSG="$1"
+
+curl -u $KEY: https://api.pushbullet.com/v2/pushes -d type=note -d title="Beetle says:" -d body="$MSG"
+echo "\n"

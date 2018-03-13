@@ -1,0 +1,4 @@
+#!/bin/bash
+# a command for alerting the success or failure of another command
+
+eval "$@" && push "experiment finished successfully" || push "experiment failed with error code $?"
