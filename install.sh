@@ -18,6 +18,8 @@ mkdir -p ~/.config/nvim/colors/
 cp init.vim ~/.config/nvim/init.vim
 # install tomorrow night eighties for nvim
 cp ~/.vim/colors/tomorrow-night-eighties.vim ~/.config/nvim/colors/
+# install python3 and gem bundles for neovim
+# TODO
 
 # if mac:
 #   install bash_profile
