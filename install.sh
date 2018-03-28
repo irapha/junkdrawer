@@ -8,6 +8,10 @@ wget -O ~/.vim/colors/tomorrow-night-eighties.vim https://github.com/chriskempso
 # install vundle for vim
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 echo "Please run vim :PluginInstall"
+# fix command-t extension
+cd ~/.vim/bundle/commant-t/
+rake make
+cd ~/dev/junkdrawer
 
 # install neovim
 sudo add-apt-repository ppa:neovim-ppa/stable
@@ -27,6 +31,7 @@ sudo apt-get update
 sudo apt-get install python3.6 python3.6-venv
 # install python3 module for neovim
 python3.6 -m pip install neovim
+echo "To make sure python extensions work in a venv, modify init.vim g:python3_host_prog to be $(which python3.6)"
 
 # if mac:
 #   install bash_profile
@@ -52,5 +57,5 @@ sed -i -e 's/KEY=\"\"/KEY=\"'$KEY'\"/g' push
 # install workon
 # TODO
 
-#   install gitconfig
+# install gitconfig
 # TODO
