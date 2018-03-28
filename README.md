@@ -1,8 +1,18 @@
 # junkdrawer
 A place for all the things that didn't fit anywhere else
 
-Currently home to...
-- `.vimrc` - my vim configuration.
-- `.bash_profile` - my bash configuration.
-- `.tmux.conf` - my tiny tmux configuration.
-- `.gitconfig` - my default settings for git (and a useful hist alias)
+## Setting up a new box
+```bash
+cd ~
+mkdir dev
+cd dev
+
+# create ssh keys
+ssh-keygen -t rsa -b 4096 -C "raphaelgontijolopes@gmail.com"
+ssh-add -K ~/.ssh/id_rsa
+# copy contents of ~/.ssh/id_rsa.pub into github
+
+git clone git@github.com:iRapha/junkdrawer.git
+cd junkdrawer
+bash ./install.sh
+```
