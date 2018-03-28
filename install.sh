@@ -19,8 +19,8 @@ cp init.vim ~/.config/nvim/init.vim
 # install tomorrow night eighties for nvim
 cp ~/.vim/colors/tomorrow-night-eighties.vim ~/.config/nvim/colors/
 # install gem bundle for neovim
-sudo apt-get install ruby
-gem install neovim
+sudo apt-get install ruby-dev
+sudo gem install neovim
 # install python3.6, python3.6-venv
 sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt-get update
