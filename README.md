@@ -9,7 +9,8 @@ cd dev
 
 # create ssh keys
 ssh-keygen -t rsa -b 4096 -C "raphaelgontijolopes@gmail.com"
-ssh-add -K ~/.ssh/id_rsa
+eval "$(ssh-agent -s)"
+ssh-add -K ~/.ssh/id_rsa || ssh-add ~/.ssh/id_rsa
 # copy contents of ~/.ssh/id_rsa.pub into github
 
 git clone git@github.com:iRapha/junkdrawer.git
