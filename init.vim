@@ -163,3 +163,9 @@ set guicursor+=i:block-Cursor         " always use block cursor
 
 " use proper python3.6 from host, not venv
 let g:python3_host_prog='/usr/local/bin/python3.6'
+
+" vim opens to the last edited position in a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$")
+    \| exe "normal! g'\"" | endif
+endif
