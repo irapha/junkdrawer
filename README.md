@@ -23,7 +23,9 @@ WIP instructions
 
 install zsh (see ~/.zshrc in macbook)
 
-install tmux (and dracula theme, and tmux config)
+install tmux 3.0
+https://gist.github.com/muralisc/dbb998a8555acc577ce2cf7aae8cd9fa
+(and dracula theme, and tmux config)
 
 install py4
 
