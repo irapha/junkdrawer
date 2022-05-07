@@ -34,3 +34,8 @@ install neovim: follow [these instructions](https://gist.github.com/bombsimon/9e
 
 install vimrc (see ~/.vimrc in macbook)
 install vim dracula theme
+```
+mkdir -p ~/.vim/pack/themes/start
+cd ~/.vim/pack/themes/start
+git clone https://github.com/dracula/vim.git dracula
+```
