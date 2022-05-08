@@ -27,18 +27,13 @@ WIP instructions
 [install zsh](https://www.tecmint.com/install-zsh-in-ubuntu/) (add ~/.zshrc from this repo)
 
 the aws deep learning amis should already come with tmux, git and py3 (add ~/tmux.conf from this repo)
+to install tmux plugins (including dracula theme), install tpm:
+`git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm`
+then launch tmux and run ctr+a+I
 
+[install neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
-install tmux 3.0
-https://gist.github.com/muralisc/dbb998a8555acc577ce2cf7aae8cd9fa
-(and dracula theme, and tmux config)
-
-install py4
-
-install git
-
-install neovim: follow [these instructions](https://gist.github.com/bombsimon/9e4f5607e01854f9624cf92c486561cf)
-(note: this did not work)
+add nvim.init (from this repo) into 
 
 install vimrc (see ~/.vimrc in macbook)
 install vim dracula theme
