@@ -40,3 +40,7 @@ mkdir -p ~/.local/share/nvim/site/pack/themes/opt/
 cd ~/.local/share/nvim/site/pack/themes/opt/
 git clone https://github.com/dracula/vim.git dracula
 ```
+
+install jupyter `sudo apt install jupyter`
+[configure instance](https://dataschool.com/data-modeling-101/running-jupyter-notebook-on-an-ec2-server/) to allow jupyter notebooks over https
+
