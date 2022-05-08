@@ -21,6 +21,11 @@ bash ./install.sh
 ## Setting up new aws dev box
 WIP instructions
 
+[add new user with ssh access](https://aws.amazon.com/premiumsupport/knowledge-center/new-user-accounts-linux-instance/) (note: default user is `ubuntu`, or `ec2-user`)
+[add the user to sudoers](https://linuxize.com/post/how-to-add-user-to-sudoers-in-ubuntu/)
+
+
+
 install zsh (see ~/.zshrc in macbook)
 
 install tmux 3.0
