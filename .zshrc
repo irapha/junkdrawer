@@ -11,12 +11,12 @@ find_br() {
   IFS='%'
   local branch
   if branch=$(git rev-parse --abbrev-ref HEAD 2> /dev/null); then
-  ¦ if [[ "$branch" == "HEAD" ]]; then
-  ¦ ¦ branch='detached*'
-  ¦ fi
-  ¦ git_branch="($branch)"' '
+    if [[ "$branch" == "HEAD" ]]; then
+      branch='detached*'
+    fi
+    git_branch="($branch)"' '
   else
-  ¦ git_branch=""
+    git_branch=""
   fi
   echo $git_branch
   unset IFS
