@@ -33,12 +33,10 @@ then launch tmux and run ctr+a+I
 
 [install neovim](https://github.com/neovim/neovim/wiki/Installing-Neovim)
 
-add nvim.init (from this repo) into 
-
-install vimrc (see ~/.vimrc in macbook)
+add init.vim (from this repo) into `~/.config/nvim/init.vim`
 install vim dracula theme
 ```
-mkdir -p ~/.vim/pack/themes/start
-cd ~/.vim/pack/themes/start
+mkdir -p ~/.local/share/nvim/site/pack/themes/opt/
+cd ~/.local/share/nvim/site/pack/themes/opt/
 git clone https://github.com/dracula/vim.git dracula
 ```
